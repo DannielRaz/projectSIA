@@ -1,0 +1,123 @@
+/* Define the style for the navigation bar with logo */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: rgb(94, 5, 5);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Push the logo to the left and menu items to the right */
+    padding: 30px 100px; /* Adjust the left and right padding */
+}
+
+.logo img {
+    max-height: 100px; /* Adjust the maximum height of the logo */
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Push the menu items to the right */
+}
+
+.menu li {
+    margin: 0 20px; /* Adjust the spacing between navigation items */
+    font-size: 18px; /* Adjust the font size */
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+.menu li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: transparent; /* Initial line color (transparent) */
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+}
+
+.menu li a:hover::after {
+    background-color: #ffffff; /* Change the line color on hover to white (#ffffff) */
+}
+
+/* Style for individual navigation menu items */
+#profile a {
+    /* Add specific styles for the "Home" item */
+    color: rgb(252, 252, 252);
+    font-weight: bold;
+}
+
+#violation a {
+    /* Add specific styles for the "About" item */
+    color: rgb(252, 252, 252);
+}
+
+#logout a {
+    /* Add specific styles for the "Login" item */
+    color: rgb(252, 252, 252);
+}
+
+/* Style for the main content */
+.main-content {
+    padding: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.student-info {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.student-info h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.violations {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.violations h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th {
+    background-color: #333;
+    color: white;
+    text-align: left;
+    padding: 8px;
+}
+
+table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+

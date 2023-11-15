@@ -1,0 +1,137 @@
+/* Define the style for the navigation bar with logo */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: rgb(94, 5, 5);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Push the logo to the left and menu items to the right */
+    padding: 30px 100px; /* Adjust the left and right padding */
+}
+
+.logo img {
+    max-height: 100px; /* Adjust the maximum height of the logo */
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Push the menu items to the right */
+}
+
+.menu li {
+    margin: 0 20px; /* Adjust the spacing between navigation items */
+    font-size: 18px; /* Adjust the font size */
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+.menu li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: transparent; /* Initial line color (transparent) */
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+}
+
+.menu li a:hover::after {
+    background-color: #ffffff; /* Change the line color on hover to white (#ffffff) */
+}
+
+
+/* Style for individual navigation menu items */
+#profile a {
+    /* Add specific styles for the "Home" item */
+    color: rgb(252, 252, 252);
+    font-weight: bold;
+}
+
+#violation a {
+    /* Add specific styles for the "About" item */
+    color: rgb(252, 252, 252);
+}
+
+#logout a {
+    /* Add specific styles for the "Login" item */
+    color: rgb(252, 252, 252);
+}
+
+/* Style for the main content */
+.main-content {
+    padding: 20px;
+}
+
+/* guidance_dashboard.css */
+.form-container {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.form-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container input[type="button"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.table-container {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:nth-child(odd) {
+    background-color: #fff;
+}
+/* Style for the "Clear" button */
+

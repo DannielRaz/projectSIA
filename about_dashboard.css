@@ -1,0 +1,102 @@
+/* Define the style for the navigation bar with logo */
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar {
+    background-color: rgb(94, 5, 5);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Push the logo to the left and menu items to the right */
+    padding: 30px 100px; /* Adjust the left and right padding */
+}
+
+.logo img {
+    max-height: 100px; /* Adjust the maximum height of the logo */
+}
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* Push the menu items to the right */
+}
+
+.menu li {
+    margin: 0 20px; /* Adjust the spacing between navigation items */
+    font-size: 18px; /* Adjust the font size */
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+.menu li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: transparent; /* Initial line color (transparent) */
+    transition: background-color 0.3s; /* Add a smooth transition effect */
+}
+
+.menu li a:hover::after {
+    background-color: #ffffff; /* Change the line color on hover to white (#ffffff) */
+}
+
+
+/* Style for individual navigation menu items */
+#home a {
+    /* Add specific styles for the "Home" item */
+    color: rgb(252, 252, 252);
+    font-weight: bold;
+}
+
+#about a {
+    /* Add specific styles for the "About" item */
+    color: rgb(252, 252, 252);
+}
+
+#login a {
+    /* Add specific styles for the "Login" item */
+    color: rgb(252, 252, 252);
+}
+
+/* Style for the main content background */
+.main-content {
+    margin: 0;
+    padding: 0;
+    color: rgb(94, 5, 5);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(130, 120, 120, 0.5) 50%), url(bgmain.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 89.8vh;
+    margin-top: -1px; /* Adjust this value based on your navigation bar's height */
+}
+
+/* Center the content vertically within the main container */
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Style for individual content boxes */
+.content-box {
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    text-align: center;
+    max-width: 500px;
+    /* Add styles for the content boxes here */
+}
+

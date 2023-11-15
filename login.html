@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="login.php" method="post">
+            <label for="username">Username:</label>
+            <div class="input-with-icon">
+                <input type="text" id="username" name="username" placeholder="Username" required>
+            </div>
+        
+            <label for="password">Password:</label>
+            <div class="input-with-icon">
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            
+            <input type="submit" value="Login">
+        </form>
+        
+        <button onclick="goToMainPage()">Go to Main Page</button>
+       
+    </div>
+
+    <script>
+        // Get the status from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const status = urlParams.get('status');
+
+        // Display a pop-up message if the status is 'error'
+        if (status === 'error') {
+            const errorMessage = 'Login failed. Please check your credentials and role.';
+            alert(errorMessage);
+
+            // Redirect back to the login page (login.html)
+            window.location.href = 'login.html';
+        }
+
+        function goToMainPage() {
+            window.location.href = 'main.html';
+        }
+    </script>
+</body>
+</html>
